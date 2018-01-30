@@ -39,5 +39,55 @@ namespace rev_B_App
            
      
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Form2 waveList = new Form2();
+            waveList.ShowDialog();
+          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 waveList = new Form2();
+            waveList.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 waveList = new Form2();
+            waveList.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 waveList = new Form2();
+            waveList.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form2 waveList = new Form2();
+            waveList.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form2 waveList = new Form2();
+            waveList.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form2 waveList = new Form2();
+            waveList.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form2 waveList = new Form2();
+            waveList.ShowDialog();
+        }
     }
 }

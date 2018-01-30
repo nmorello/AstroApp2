@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.freqdrop = new System.Windows.Forms.ComboBox();
             this.ampdrop = new System.Windows.Forms.ComboBox();
+            this.freqdrop = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -115,6 +115,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Master";
             // 
+            // ampdrop
+            // 
+            this.ampdrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ampdrop.FormattingEnabled = true;
+            this.ampdrop.Items.AddRange(new object[] {
+            "mV",
+            "V"});
+            this.ampdrop.Location = new System.Drawing.Point(449, 108);
+            this.ampdrop.Name = "ampdrop";
+            this.ampdrop.Size = new System.Drawing.Size(79, 32);
+            this.ampdrop.TabIndex = 5;
+            // 
             // freqdrop
             // 
             this.freqdrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -125,21 +137,9 @@
             "MHz"});
             this.freqdrop.Location = new System.Drawing.Point(449, 65);
             this.freqdrop.Name = "freqdrop";
-            this.freqdrop.Size = new System.Drawing.Size(67, 32);
+            this.freqdrop.Size = new System.Drawing.Size(79, 32);
             this.freqdrop.TabIndex = 4;
             this.freqdrop.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // ampdrop
-            // 
-            this.ampdrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ampdrop.FormattingEnabled = true;
-            this.ampdrop.Items.AddRange(new object[] {
-            "mV",
-            "V"});
-            this.ampdrop.Location = new System.Drawing.Point(449, 108);
-            this.ampdrop.Name = "ampdrop";
-            this.ampdrop.Size = new System.Drawing.Size(67, 32);
-            this.ampdrop.TabIndex = 5;
             // 
             // label4
             // 
@@ -175,6 +175,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Channel 1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -184,6 +185,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Channel 2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -193,6 +195,7 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "Channel 3\r\n";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -202,6 +205,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "Channel 4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -211,6 +215,7 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Channel 5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -220,6 +225,7 @@
             this.button6.TabIndex = 13;
             this.button6.Text = "Channel 6";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -229,6 +235,7 @@
             this.button7.TabIndex = 14;
             this.button7.Text = "Channel 7";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -238,6 +245,7 @@
             this.button8.TabIndex = 15;
             this.button8.Text = "Channel 8";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // channel1
             // 
