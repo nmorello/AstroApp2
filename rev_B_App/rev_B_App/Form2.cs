@@ -12,6 +12,8 @@ namespace rev_B_App
 {
     public partial class Form2 : Form
     {
+        public static string selectedWave = "";
+
         public Form2()
         {
             InitializeComponent();
@@ -19,7 +21,21 @@ namespace rev_B_App
 
         private void button3_Click(object sender, EventArgs e)
         {
+            selectedWave = button3.Text;
+            this.Close();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            selectedWave = button1.Text;
+            this.Close();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            selectedWave = button2.Text;
+            this.Close();
         }
     }
 }

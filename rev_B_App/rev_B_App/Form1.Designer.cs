@@ -46,14 +46,14 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.channel1 = new System.Windows.Forms.TextBox();
-            this.channel2 = new System.Windows.Forms.TextBox();
-            this.channel3 = new System.Windows.Forms.TextBox();
-            this.channel4 = new System.Windows.Forms.TextBox();
-            this.channel5 = new System.Windows.Forms.TextBox();
-            this.channel6 = new System.Windows.Forms.TextBox();
-            this.channel7 = new System.Windows.Forms.TextBox();
-            this.channel8 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -247,83 +247,101 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // channel1
+            // label5
             // 
-            this.channel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channel1.Location = new System.Drawing.Point(258, 467);
-            this.channel1.Name = "channel1";
-            this.channel1.Size = new System.Drawing.Size(100, 39);
-            this.channel1.TabIndex = 16;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(267, 473);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 30);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Start";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // channel2
+            // label6
             // 
-            this.channel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channel2.Location = new System.Drawing.Point(258, 516);
-            this.channel2.Name = "channel2";
-            this.channel2.Size = new System.Drawing.Size(100, 39);
-            this.channel2.TabIndex = 17;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(267, 525);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 30);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Start\r\n";
             // 
-            // channel3
+            // label7
             // 
-            this.channel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channel3.Location = new System.Drawing.Point(258, 561);
-            this.channel3.Name = "channel3";
-            this.channel3.Size = new System.Drawing.Size(100, 39);
-            this.channel3.TabIndex = 18;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(267, 574);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 30);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Start";
             // 
-            // channel4
+            // label8
             // 
-            this.channel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channel4.Location = new System.Drawing.Point(258, 612);
-            this.channel4.Name = "channel4";
-            this.channel4.Size = new System.Drawing.Size(100, 39);
-            this.channel4.TabIndex = 19;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(267, 621);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 30);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Start";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // channel5
+            // label9
             // 
-            this.channel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channel5.Location = new System.Drawing.Point(258, 657);
-            this.channel5.Name = "channel5";
-            this.channel5.Size = new System.Drawing.Size(100, 39);
-            this.channel5.TabIndex = 20;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(267, 668);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 30);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Start";
             // 
-            // channel6
+            // label10
             // 
-            this.channel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channel6.Location = new System.Drawing.Point(258, 706);
-            this.channel6.Name = "channel6";
-            this.channel6.Size = new System.Drawing.Size(100, 39);
-            this.channel6.TabIndex = 21;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(267, 715);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 30);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Start";
             // 
-            // channel7
+            // label11
             // 
-            this.channel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channel7.Location = new System.Drawing.Point(258, 751);
-            this.channel7.Name = "channel7";
-            this.channel7.Size = new System.Drawing.Size(100, 39);
-            this.channel7.TabIndex = 22;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(267, 762);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 30);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Start";
             // 
-            // channel8
+            // label12
             // 
-            this.channel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.channel8.Location = new System.Drawing.Point(258, 800);
-            this.channel8.Name = "channel8";
-            this.channel8.Size = new System.Drawing.Size(100, 39);
-            this.channel8.TabIndex = 23;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(267, 809);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 30);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Start";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1566, 963);
-            this.Controls.Add(this.channel8);
-            this.Controls.Add(this.channel7);
-            this.Controls.Add(this.channel6);
-            this.Controls.Add(this.channel5);
-            this.Controls.Add(this.channel4);
-            this.Controls.Add(this.channel3);
-            this.Controls.Add(this.channel2);
-            this.Controls.Add(this.channel1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -365,14 +383,14 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox channel1;
-        private System.Windows.Forms.TextBox channel2;
-        private System.Windows.Forms.TextBox channel3;
-        private System.Windows.Forms.TextBox channel4;
-        private System.Windows.Forms.TextBox channel5;
-        private System.Windows.Forms.TextBox channel6;
-        private System.Windows.Forms.TextBox channel7;
-        private System.Windows.Forms.TextBox channel8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
 
