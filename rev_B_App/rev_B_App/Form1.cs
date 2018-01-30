@@ -16,5 +16,28 @@ namespace rev_B_App
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox3.Text == "D")
+            {
+                freqbox.Enabled = false;
+                freqdrop.Enabled = false;
+                ampbox.Enabled = false;
+                ampdrop.Enabled = false;
+            }
+           
+     
+        }
     }
 }
