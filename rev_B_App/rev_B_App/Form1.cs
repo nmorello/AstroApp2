@@ -29,6 +29,9 @@ namespace rev_B_App
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            
+
             if(comboBox3.Text == "D")
             {
                 freqbox.Enabled = false;
@@ -36,7 +39,13 @@ namespace rev_B_App
                 ampbox.Enabled = false;
                 ampdrop.Enabled = false;
             }
-           
+           else
+            {
+                freqbox.Enabled = true;
+                freqdrop.Enabled = true;
+                ampbox.Enabled = true;
+                ampdrop.Enabled = true;
+            }
      
         }
 
@@ -109,6 +118,35 @@ namespace rev_B_App
         public void label5_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void freqbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void freqbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if(!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+
+            
+        }
+
+        private void ampbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
         }
     }
 }

@@ -37,5 +37,52 @@ namespace rev_B_App
             selectedWave = button2.Text;
             this.Close();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            selectedWave = button9.Text;
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            selectedWave = button5.Text;
+            this.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            selectedWave = button8.Text;
+            this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            selectedWave = button7.Text;
+            this.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            selectedWave = button10.Text;
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            selectedWave = button6.Text;
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            selectedWave = button4.Text;
+            this.Close();
+        }
     }
 }
