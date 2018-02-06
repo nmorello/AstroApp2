@@ -22,86 +22,98 @@ namespace rev_B_App
 
         private void button3_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button3.Text;
-            prevWave = button3.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button1.Text;
-            prevWave = button1.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button2.Text;
-            prevWave = button2.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if( selectedWave == prevWave)
+            if (selectedWave != prevWave)
             {
-               
+                selectedWave = prevWave;
+                MessageBox.Show(prevWave, selectedWave);
                 this.Close();
             }
             else
             {
-                selectedWave = "Start";
+                
                 this.Close();
             }
+                
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button9.Text;
-            prevWave = button9.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button5.Text;
-            prevWave = button5.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button8.Text;
-            prevWave = button8.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button7.Text;
-            prevWave = button7.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button10.Text;
-            prevWave = button10.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button6.Text;
-            prevWave = button6.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            prevWave = selectedWave;
             selectedWave = button4.Text;
-            prevWave = button4.Text;
+            MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
     }

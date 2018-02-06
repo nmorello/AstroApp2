@@ -15,6 +15,7 @@ namespace rev_B_App
         public Form1()
         {
             InitializeComponent();
+            comboBox3.SelectedIndex = 0;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,10 +52,35 @@ namespace rev_B_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             Form2 waveList = new Form2();
-            waveList.ShowDialog();
-            label5.Text = Form2.selectedWave;
+
+            switch (comboBox3.SelectedItem.ToString())
+            {
+
+                case "A":
+                     
+                     waveList.ShowDialog();
+                     label5.Text = Form2.selectedWave;
+                    break;
+
+                case "B":
+                    
+                    waveList.ShowDialog();
+                    label5.Text = Form2.selectedWave;
+                    break;
+
+                case "C":
+                    
+                    waveList.ShowDialog();
+                    label5.Text = Form2.selectedWave;
+                    break;
+
+                case "D":
+                    Form3 setup = new Form3();
+                    setup.ShowDialog();
+                    break;
+
+            }
   
 
         }
@@ -147,6 +173,19 @@ namespace rev_B_App
                 e.Handled = true;
                 MessageBox.Show("Please Enter Numbers Only");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+         
+
+            
+            status.Text = "Connected";
         }
     }
 }

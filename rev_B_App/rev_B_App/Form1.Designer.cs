@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.freqbox = new System.Windows.Forms.TextBox();
             this.ampbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,14 +54,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button9 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.status = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // freqbox
             // 
-            this.freqbox.Location = new System.Drawing.Point(311, 65);
+            this.freqbox.Location = new System.Drawing.Point(260, 78);
             this.freqbox.MaxLength = 3;
             this.freqbox.Name = "freqbox";
             this.freqbox.Size = new System.Drawing.Size(121, 29);
@@ -72,7 +72,7 @@
             // 
             // ampbox
             // 
-            this.ampbox.Location = new System.Drawing.Point(311, 111);
+            this.ampbox.Location = new System.Drawing.Point(260, 124);
             this.ampbox.MaxLength = 3;
             this.ampbox.Name = "ampbox";
             this.ampbox.Size = new System.Drawing.Size(121, 29);
@@ -82,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 69);
+            this.label1.Location = new System.Drawing.Point(136, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 25);
             this.label1.TabIndex = 2;
@@ -92,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 115);
+            this.label2.Location = new System.Drawing.Point(136, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 25);
             this.label2.TabIndex = 3;
@@ -130,7 +130,7 @@
             this.ampdrop.Items.AddRange(new object[] {
             "mV",
             "V"});
-            this.ampdrop.Location = new System.Drawing.Point(449, 108);
+            this.ampdrop.Location = new System.Drawing.Point(398, 121);
             this.ampdrop.Name = "ampdrop";
             this.ampdrop.Size = new System.Drawing.Size(79, 32);
             this.ampdrop.TabIndex = 5;
@@ -143,7 +143,7 @@
             "Hz",
             "kHz",
             "MHz"});
-            this.freqdrop.Location = new System.Drawing.Point(449, 65);
+            this.freqdrop.Location = new System.Drawing.Point(398, 78);
             this.freqdrop.Name = "freqdrop";
             this.freqdrop.Size = new System.Drawing.Size(79, 32);
             this.freqdrop.TabIndex = 4;
@@ -338,15 +338,42 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "Start";
             // 
-            // errorProvider1
+            // button9
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.button9.Location = new System.Drawing.Point(1174, 183);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(123, 173);
+            this.button9.TabIndex = 24;
+            this.button9.Text = "Connect to WG-800";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1174, 889);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 25);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Status:";
+            // 
+            // status
+            // 
+            this.status.AutoSize = true;
+            this.status.Location = new System.Drawing.Point(1254, 889);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(131, 25);
+            this.status.TabIndex = 26;
+            this.status.Text = "Disconnected";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1566, 963);
+            this.Controls.Add(this.status);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -369,9 +396,9 @@
             this.Controls.Add(this.label3);
             this.Name = "Form1";
             this.Text = "AstroApp WG-800";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,7 +432,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label status;
     }
 }
 
