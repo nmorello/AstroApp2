@@ -42,6 +42,9 @@ namespace rev_B_App
                     timeDelta.Visible = false;
                     voltage.Visible = true;
                     posOrNeg.Visible = false;
+                    voltageIn.Visible = true;
+                    timeDIn.Visible = false;
+                    freqIn.Visible = false;
                     break;
 
                 case "SINE":
@@ -55,6 +58,9 @@ namespace rev_B_App
                     timeDelta.Visible = false;
                     voltage.Visible = false;
                     posOrNeg.Visible = false;
+                    voltageIn.Visible = false;
+                    timeDIn.Visible = false;
+                    freqIn.Visible = true;
                     break;
 
                 case "SQUARE":
@@ -68,6 +74,9 @@ namespace rev_B_App
                     timeDelta.Visible = false;
                     voltage.Visible = false;
                     posOrNeg.Visible = false;
+                    voltageIn.Visible = false;
+                    timeDIn.Visible = false;
+                    freqIn.Visible = false;
                     break;
 
                 case "PULSE":
@@ -81,6 +90,9 @@ namespace rev_B_App
                     timeDelta.Visible = false;
                     voltage.Visible = false;
                     posOrNeg.Visible = true;
+                    voltageIn.Visible = false;
+                    timeDIn.Visible = false;
+                    freqIn.Visible = false;
                     break;
 
                 case "TRIANGLE":
@@ -94,6 +106,9 @@ namespace rev_B_App
                     timeDelta.Visible = false;
                     voltage.Visible = false;
                     posOrNeg.Visible = false;
+                    voltageIn.Visible = false;
+                    timeDIn.Visible = false;
+                    freqIn.Visible = false;
                     break;
 
                 case "SAWTOOTH":
@@ -107,6 +122,9 @@ namespace rev_B_App
                     timeDelta.Visible = false;
                     voltage.Visible = false;
                     posOrNeg.Visible = true;
+                    voltageIn.Visible = false;
+                    timeDIn.Visible = false;
+                    freqIn.Visible = false;
                     break;
 
                 case "ARB":
@@ -120,6 +138,9 @@ namespace rev_B_App
                     timeDelta.Visible = true;
                     voltage.Visible = false;
                     posOrNeg.Visible = false;
+                    voltageIn.Visible = false;
+                    timeDIn.Visible = true;
+                    freqIn.Visible = false;
                     break;
 
                 case "Select":
@@ -133,6 +154,9 @@ namespace rev_B_App
                     timeDelta.Visible = false;
                     voltage.Visible = false;
                     posOrNeg.Visible = false;
+                    voltageIn.Visible = false;
+                    timeDIn.Visible = false;
+                    freqIn.Visible = false;
                     break;
 
             }
@@ -141,6 +165,11 @@ namespace rev_B_App
         private void posOrNeg_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void voltageIn_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
    }

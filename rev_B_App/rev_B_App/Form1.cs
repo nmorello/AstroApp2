@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace rev_B_App
 {
@@ -14,8 +15,28 @@ namespace rev_B_App
     {
         public Form1()
         {
+
+            Thread l = new Thread(new ThreadStart(LaunchScreen));
+            l.Start();
+            Thread.Sleep(5000);
+
+            
+
             InitializeComponent();
             comboBox3.SelectedIndex = 0;
+
+            l.Abort();
+
+            this.WindowState = FormWindowState.Minimized;
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+
+
+        }
+
+        public void LaunchScreen()
+        {
+            Application.Run(new Form4());
         }
 
         private void label1_Click(object sender, EventArgs e)

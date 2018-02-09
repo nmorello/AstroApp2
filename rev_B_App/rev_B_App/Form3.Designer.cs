@@ -40,6 +40,15 @@
             this.loopCount = new System.Windows.Forms.Label();
             this.voltage = new System.Windows.Forms.Label();
             this.posOrNeg = new System.Windows.Forms.ComboBox();
+            this.voltageIn = new System.Windows.Forms.TextBox();
+            this.timeDIn = new System.Windows.Forms.TextBox();
+            this.freqIn = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // modeSelect
@@ -178,11 +187,84 @@
             this.posOrNeg.TabIndex = 12;
             this.posOrNeg.SelectedIndexChanged += new System.EventHandler(this.posOrNeg_SelectedIndexChanged);
             // 
+            // voltageIn
+            // 
+            this.voltageIn.Location = new System.Drawing.Point(550, 164);
+            this.voltageIn.Name = "voltageIn";
+            this.voltageIn.Size = new System.Drawing.Size(182, 29);
+            this.voltageIn.TabIndex = 13;
+            this.voltageIn.TextChanged += new System.EventHandler(this.voltageIn_TextChanged);
+            // 
+            // timeDIn
+            // 
+            this.timeDIn.Location = new System.Drawing.Point(550, 164);
+            this.timeDIn.Name = "timeDIn";
+            this.timeDIn.Size = new System.Drawing.Size(182, 29);
+            this.timeDIn.TabIndex = 14;
+            // 
+            // freqIn
+            // 
+            this.freqIn.Location = new System.Drawing.Point(550, 164);
+            this.freqIn.Name = "freqIn";
+            this.freqIn.Size = new System.Drawing.Size(182, 29);
+            this.freqIn.TabIndex = 15;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(738, 202);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(182, 29);
+            this.textBox1.TabIndex = 16;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(550, 202);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(182, 29);
+            this.textBox2.TabIndex = 17;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(550, 243);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(182, 29);
+            this.textBox3.TabIndex = 18;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(738, 240);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(182, 29);
+            this.textBox4.TabIndex = 19;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(550, 283);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(182, 29);
+            this.textBox5.TabIndex = 20;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(738, 283);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(182, 29);
+            this.textBox6.TabIndex = 21;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 559);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.freqIn);
+            this.Controls.Add(this.timeDIn);
+            this.Controls.Add(this.voltageIn);
             this.Controls.Add(this.posOrNeg);
             this.Controls.Add(this.voltage);
             this.Controls.Add(this.loopCount);
@@ -216,5 +298,14 @@
         private System.Windows.Forms.Label loopCount;
         private System.Windows.Forms.Label voltage;
         private System.Windows.Forms.ComboBox posOrNeg;
+        private System.Windows.Forms.TextBox voltageIn;
+        private System.Windows.Forms.TextBox timeDIn;
+        private System.Windows.Forms.TextBox freqIn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
