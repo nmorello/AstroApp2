@@ -12,8 +12,8 @@ namespace rev_B_App
 {
     public partial class Form2 : Form
     {
-        public static string selectedWave = "";
-        public static string prevWave = "Start";
+        public static string selectedWave;
+        public static string prevWave = "Sine";
 
         public Form2()
         {
@@ -24,15 +24,15 @@ namespace rev_B_App
         {
             prevWave = selectedWave;
             selectedWave = button3.Text;
-            MessageBox.Show(prevWave, selectedWave);
+           // MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             prevWave = selectedWave;
             selectedWave = button1.Text;
-            MessageBox.Show(prevWave, selectedWave);
+            //MessageBox.Show(prevWave, selectedWave);
             this.Close();
 
         }
@@ -41,31 +41,15 @@ namespace rev_B_App
         {
             prevWave = selectedWave;
             selectedWave = button2.Text;
-            MessageBox.Show(prevWave, selectedWave);
+           // MessageBox.Show(prevWave, selectedWave);
             this.Close();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            if (selectedWave != prevWave)
-            {
-                selectedWave = prevWave;
-                MessageBox.Show(prevWave, selectedWave);
-                this.Close();
-            }
-            else
-            {
-                
-                this.Close();
-            }
-                
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             prevWave = selectedWave;
             selectedWave = button9.Text;
-            MessageBox.Show(prevWave, selectedWave);
+           // MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
@@ -73,7 +57,7 @@ namespace rev_B_App
         {
             prevWave = selectedWave;
             selectedWave = button5.Text;
-            MessageBox.Show(prevWave, selectedWave);
+            //MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
@@ -81,7 +65,7 @@ namespace rev_B_App
         {
             prevWave = selectedWave;
             selectedWave = button8.Text;
-            MessageBox.Show(prevWave, selectedWave);
+            //MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
@@ -89,7 +73,7 @@ namespace rev_B_App
         {
             prevWave = selectedWave;
             selectedWave = button7.Text;
-            MessageBox.Show(prevWave, selectedWave);
+            //MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
@@ -97,7 +81,7 @@ namespace rev_B_App
         {
             prevWave = selectedWave;
             selectedWave = button10.Text;
-            MessageBox.Show(prevWave, selectedWave);
+           // MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
@@ -105,7 +89,7 @@ namespace rev_B_App
         {
             prevWave = selectedWave;
             selectedWave = button6.Text;
-            MessageBox.Show(prevWave, selectedWave);
+           // MessageBox.Show(prevWave, selectedWave);
             this.Close();
         }
 
@@ -113,8 +97,23 @@ namespace rev_B_App
         {
             prevWave = selectedWave;
             selectedWave = button4.Text;
-            MessageBox.Show(prevWave, selectedWave);
+           // MessageBox.Show(prevWave, selectedWave);
             this.Close();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (selectedWave != prevWave)
+            {
+
+                this.Close();
+            }
+            else
+            {
+                selectedWave = prevWave;
+                this.Close();
+            }
+
         }
     }
 }
