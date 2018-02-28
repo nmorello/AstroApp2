@@ -13,7 +13,8 @@ namespace rev_B_App
 {
     public partial class Form1 : Form
     {
-        
+        public static string wave1, wave2, wave3, wave4, wave5, wave6, wave7, wave8;
+
         public Form1()
         {
             //Launch Screen Timer
@@ -21,7 +22,7 @@ namespace rev_B_App
             l.Start();
             Thread.Sleep(5000);
 
-            
+
             //Initializing dropdown menus
             InitializeComponent();
             comboBox3.SelectedIndex = 0;
@@ -40,26 +41,21 @@ namespace rev_B_App
         {
             //Luanch Screen physical form
             Application.Run(new Form4());
-            
+
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Disbale master freq and amp if bank d selected
-            if(comboBox3.Text == "D")
+            if (comboBox3.Text == "D")
             {
                 freqbox.Enabled = false;
                 freqdrop.Enabled = false;
                 ampbox.Enabled = false;
                 ampdrop.Enabled = false;
                 desbut1.Enabled = true;
-                desbut2.Enabled = true;
-                desbut3.Enabled = true;
-                desbut4.Enabled = true;
-                desbut5.Enabled = true;
-                desbut6.Enabled = true;
-                desbut7.Enabled = true;
-                desbut8.Enabled = true;
+                button11.Enabled = false;
+                saveBank.Enabled = false;
                 label5.Text = "Sine";
                 label6.Text = "Sine";
                 label7.Text = "Sine";
@@ -68,23 +64,19 @@ namespace rev_B_App
                 label10.Text = "Sine";
                 label11.Text = "Sine";
                 label12.Text = "Sine";
+                
 
 
             }
-           else
+            else
             {
                 freqbox.Enabled = true;
                 freqdrop.Enabled = true;
                 ampbox.Enabled = true;
                 ampdrop.Enabled = true;
                 desbut1.Enabled = false;
-                desbut2.Enabled = false;
-                desbut3.Enabled = false;
-                desbut4.Enabled = false;
-                desbut5.Enabled = false;
-                desbut6.Enabled = false;
-                desbut7.Enabled = false;
-                desbut8.Enabled = false;
+                button11.Enabled = true;
+                saveBank.Enabled = true;
                 label5.Text = "Sine";
                 label6.Text = "Sine";
                 label7.Text = "Sine";
@@ -94,46 +86,50 @@ namespace rev_B_App
                 label11.Text = "Sine";
                 label12.Text = "Sine";
             }
-     
+
         }
 
-    
+
         public void button1_Click(object sender, EventArgs e)
         {
             //variables for wave select and custom wave
             Form2 waveList = new Form2();
             Form3 setup = new Form3();
-        
+
 
             switch (comboBox3.SelectedItem.ToString())
             {
 
                 case "A":
-                     
+
                     waveList.ShowDialog();
                     label5.Text = Form2.selectedWave;
+                    
                     break;
 
                 case "B":
-                    
+
                     waveList.ShowDialog();
                     label5.Text = Form2.selectedWave;
+                    
                     break;
 
                 case "C":
-                    
+
                     waveList.ShowDialog();
                     label5.Text = Form2.selectedWave;
+                    
                     break;
 
                 case "D":
-                    
+
                     setup.ShowDialog();
                     label5.Text = Form3.customWave;
+                    wave1 = label5.Text;
                     break;
 
             }
-  
+
 
         }
 
@@ -169,6 +165,7 @@ namespace rev_B_App
 
                     setup.ShowDialog();
                     label6.Text = Form3.customWave;
+                    wave2 = label6.Text;
                     break;
             }
         }
@@ -205,6 +202,7 @@ namespace rev_B_App
 
                     setup.ShowDialog();
                     label7.Text = Form3.customWave;
+                    wave3 = label7.Text;
                     break;
             }
         }
@@ -241,6 +239,7 @@ namespace rev_B_App
 
                     setup.ShowDialog();
                     label8.Text = Form3.customWave;
+                    wave4 = label8.Text;
                     break;
             }
         }
@@ -277,6 +276,7 @@ namespace rev_B_App
 
                     setup.ShowDialog();
                     label9.Text = Form3.customWave;
+                    wave5 = label9.Text;
                     break;
             }
         }
@@ -313,6 +313,7 @@ namespace rev_B_App
 
                     setup.ShowDialog();
                     label10.Text = Form3.customWave;
+                    wave6 = label10.Text;
                     break;
             }
         }
@@ -349,6 +350,7 @@ namespace rev_B_App
 
                     setup.ShowDialog();
                     label11.Text = Form3.customWave;
+                    wave7 = label11.Text;
                     break;
             }
         }
@@ -360,13 +362,13 @@ namespace rev_B_App
             Form3 setup = new Form3();
 
 
-            switch (comboBox3.SelectedItem.ToString())
+            switch (comboBox3.SelectedItem.ToString()) //switch case for banks
             {
 
                 case "A":
 
-                    waveList.ShowDialog();
-                    label12.Text = Form2.selectedWave;
+                    waveList.ShowDialog();//show possible selections
+                    label12.Text = Form2.selectedWave;//write selection text to main form
                     break;
 
                 case "B":
@@ -385,38 +387,23 @@ namespace rev_B_App
 
                     setup.ShowDialog();
                     label12.Text = Form3.customWave;
+                    wave8 = label12.Text;
                     break;
             }
         }
 
      
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void label5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void freqbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void freqbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
 
-            if(!Char.IsDigit(ch) && ch != 8)
+            if (!Char.IsDigit(ch) && ch != 8)
             {
                 e.Handled = true;
                 MessageBox.Show("Please Enter Numbers Only");
             }
 
-            
+
         }
 
         private void ampbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -430,16 +417,10 @@ namespace rev_B_App
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button9_Click(object sender, EventArgs e)
         {
-         
 
-            
             status.Text = "Connected";
         }
 
@@ -447,12 +428,6 @@ namespace rev_B_App
         {
             Form5 parameters = new Form5();
             parameters.ShowDialog();
-        }
-
-        public class BankList
-        {
-            
-
         }
 
         private void desbut2_Click(object sender, EventArgs e)
@@ -463,14 +438,98 @@ namespace rev_B_App
 
         private void button10_Click(object sender, EventArgs e)
         {
-            label5.Text = "Sine";
-            label6.Text = "Sine";
-            label7.Text = "Sine";
-            label8.Text = "Sine";
-            label9.Text = "Sine";
-            label10.Text = "Sine";
-            label11.Text = "Sine";
-            label12.Text = "Sine";
+            switch (comboBox3.SelectedItem.ToString())
+            {
+                //restores selected bank to default values
+                case "A":
+                    label5.Text = "Sine";
+                    label6.Text = "Sine";
+                    label7.Text = "Sine";
+                    label8.Text = "Sine";
+                    label9.Text = "Sine";
+                    label10.Text = "Sine";
+                    label11.Text = "Sine";
+                    label12.Text = "Sine";
+                    break;
+
+                case "B":
+                    label5.Text = "Sine";
+                    label6.Text = "Sine";
+                    label7.Text = "Sine";
+                    label8.Text = "Sine";
+                    label9.Text = "Sine";
+                    label10.Text = "Sine";
+                    label11.Text = "Sine";
+                    label12.Text = "Sine";
+
+                    break;
+
+                case "C":
+                    label5.Text = "Sine";
+                    label6.Text = "Sine";
+                    label7.Text = "Sine";
+                    label8.Text = "Sine";
+                    label9.Text = "Sine";
+                    label10.Text = "Sine";
+                    label11.Text = "Sine";
+                    label12.Text = "Sine";
+
+                    break;
+
+                case "D":
+                    label5.Text = "Sine";
+                    label6.Text = "Sine";
+                    label7.Text = "Sine";
+                    label8.Text = "Sine";
+                    label9.Text = "Sine";
+                    label10.Text = "Sine";
+                    label11.Text = "Sine";
+                    label12.Text = "Sine";
+
+                    break;
+            }
+        }
+
+        string save = "";
+        string[] saved = new string[8];
+
+        public void saveBank_Click(object sender, EventArgs e)
+        {
+          
+            saved[0] = label5.Text;
+            saved[1] = label6.Text;
+            saved[2] = label7.Text;
+            saved[3] = label8.Text;
+            saved[4] = label9.Text;
+            saved[5] = label10.Text;
+            saved[6] = label11.Text;
+            saved[7] = label12.Text;
+                foreach (var item in saved)
+                 {
+                    save += item + "\n";
+                 }
+
+            MessageBox.Show(save);
+
+
+
+        }
+
+        
+
+        private void button11_Click(object sender, EventArgs e)
+        { 
+
+
+            label5.Text = saved[0];
+            label6.Text = saved[1];
+            label7.Text = saved[2];
+            label8.Text = saved[3];
+            label9.Text = saved[4];
+            label10.Text = saved[5];
+            label11.Text = saved[6];
+            label12.Text = saved[7];
+
         }
     }
 }

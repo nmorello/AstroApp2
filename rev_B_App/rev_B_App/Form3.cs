@@ -16,15 +16,9 @@ namespace rev_B_App
 
     public partial class Form3 : Form
     {
-        public static string customWave;
-        public static string freq;
-        public static string amp;
-        public static string offs;
-        public static string phaset;
-        public static string rampt;
-        public static string volt;
-        
-        public static string wave;
+        public static string customWave, freq, amp, offs, phaset, rampt, volt, dutyt, loopc, timed;
+
+     
 
         public Form3()
         {
@@ -34,12 +28,107 @@ namespace rev_B_App
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void freqIn_KeyPress(object sender, KeyPressEventArgs e)
         {
+            char ch = e.KeyChar;
 
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ampIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+        }
+
+        private void voltageIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+        }
+
+        private void timeDIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+        }
+
+        private void offsetIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+        }
+
+        private void dutyIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+        }
+
+        private void phaseIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+        }
+
+        private void rampTimeIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+        }
+
+        private void loopIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Please Enter Numbers Only");
+            }
+        }
+
+
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
 
@@ -66,7 +155,7 @@ namespace rev_B_App
                     rampTimeIn.Visible = false;
                     offsetIn.Visible = false;
                     loopIn.Visible = false;
-                    wave = "DC";
+                    customWave = "DC";
                     break;
 
                 case "Sine":
@@ -89,7 +178,7 @@ namespace rev_B_App
                     rampTimeIn.Visible = false;
                     offsetIn.Visible = true;
                     loopIn.Visible = false;
-                    wave = "Sine";
+                    customWave = "Sine";
                     break;
 
                 case "Square":
@@ -112,7 +201,7 @@ namespace rev_B_App
                     rampTimeIn.Visible = false;
                     offsetIn.Visible = true;
                     loopIn.Visible = false;
-                    wave = "Square";
+                    customWave = "Square";
                     break;
 
                 case "Pulse":
@@ -135,7 +224,7 @@ namespace rev_B_App
                     rampTimeIn.Visible = false;
                     offsetIn.Visible = true;
                     loopIn.Visible = false;
-                    wave = "Pulse";
+                    customWave = "Pulse";
                     break;
 
                 case "Triangle":
@@ -158,7 +247,7 @@ namespace rev_B_App
                     rampTimeIn.Visible = false;
                     offsetIn.Visible = true;
                     loopIn.Visible = false;
-                    wave = "Triangle";
+                    customWave = "Triangle";
                     break;
 
                 case "Sawtooth":
@@ -181,7 +270,7 @@ namespace rev_B_App
                     rampTimeIn.Visible = true;
                     offsetIn.Visible = true;
                     loopIn.Visible = false;
-                    wave = "Sawtooth";
+                    customWave = "Sawtooth";
                     break;
 
                 case "Arb":
@@ -204,7 +293,7 @@ namespace rev_B_App
                     rampTimeIn.Visible = false;
                     offsetIn.Visible = false;
                     loopIn.Visible = true;
-                    wave = "Arbitrary";
+                    customWave = "Arbitrary";
                     break;
 
                 case "Select":
@@ -227,34 +316,63 @@ namespace rev_B_App
                     rampTimeIn.Visible = false;
                     offsetIn.Visible = false;
                     loopIn.Visible = false;
-                    wave = "";
+                    customWave = "";
                     break;
 
             }
         }
 
-        private void posOrNeg_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void voltageIn_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        { 
-
-        }
 
         public void selectbut_Click(object sender, EventArgs e)
         {
-            customWave = modeSelect.Text;
-            freq = freqIn.Text;
-            amp = ampIn.Text;
-            offs = offsetIn.Text;
-            phaset = phaseIn.Text;
+            switch (modeSelect.SelectedItem.ToString())
+            {
+                case "DC":
+
+                    volt = voltageIn.Text;
+                    break;
+
+                case "Sine":
+
+                    freq = freqIn.Text;
+                    amp = ampIn.Text;
+                    offs = offsetIn.Text;
+                    phaset = phaseIn.Text;
+                    break;
+
+                case "Square":
+
+                    freq = freqIn.Text;
+                    amp = ampIn.Text;
+                    offs = offsetIn.Text;
+                    phaset = phaseIn.Text;
+                    break;
+                case "Pulse":
+
+                    freq = freqIn.Text;
+                    amp = ampIn.Text;
+                    offs = offsetIn.Text;
+                    dutyt = dutyIn.Text;
+                    break;
+                case "Triangle":
+                    freq = freqIn.Text;
+                    amp = ampIn.Text;
+                    offs = offsetIn.Text;
+                    break;
+
+                case "Sawtooth":
+                    freq = freqIn.Text;
+                    amp = ampIn.Text;
+                    offs = offsetIn.Text;
+                    rampt = rampTimeIn.Text;
+                    break;
+
+                case "Arb":
+                    loopc = loopIn.Text;
+                    timed = timeDIn.Text;
+                    break;
+
+            }
 
             this.Close();
         }
@@ -262,11 +380,6 @@ namespace rev_B_App
         private void cancelbut_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void freqIn_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
    }

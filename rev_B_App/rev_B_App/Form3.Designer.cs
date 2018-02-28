@@ -82,7 +82,6 @@
             this.label1.Size = new System.Drawing.Size(77, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mode";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frequency
             // 
@@ -128,7 +127,7 @@
             // 
             this.duty.AutoSize = true;
             this.duty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.duty.Location = new System.Drawing.Point(498, 246);
+            this.duty.Location = new System.Drawing.Point(498, 287);
             this.duty.Name = "duty";
             this.duty.Size = new System.Drawing.Size(71, 31);
             this.duty.TabIndex = 7;
@@ -187,7 +186,6 @@
             this.posOrNeg.Name = "posOrNeg";
             this.posOrNeg.Size = new System.Drawing.Size(182, 40);
             this.posOrNeg.TabIndex = 12;
-            this.posOrNeg.SelectedIndexChanged += new System.EventHandler(this.posOrNeg_SelectedIndexChanged);
             // 
             // voltageIn
             // 
@@ -195,7 +193,6 @@
             this.voltageIn.Name = "voltageIn";
             this.voltageIn.Size = new System.Drawing.Size(182, 29);
             this.voltageIn.TabIndex = 13;
-            this.voltageIn.TextChanged += new System.EventHandler(this.voltageIn_TextChanged);
             // 
             // timeDIn
             // 
@@ -210,7 +207,7 @@
             this.freqIn.Name = "freqIn";
             this.freqIn.Size = new System.Drawing.Size(182, 29);
             this.freqIn.TabIndex = 15;
-            this.freqIn.TextChanged += new System.EventHandler(this.freqIn_TextChanged);
+            this.freqIn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.freqIn_KeyPress);
             // 
             // loopIn
             // 
@@ -228,14 +225,14 @@
             // 
             // dutyIn
             // 
-            this.dutyIn.Location = new System.Drawing.Point(684, 248);
+            this.dutyIn.Location = new System.Drawing.Point(684, 287);
             this.dutyIn.Name = "dutyIn";
             this.dutyIn.Size = new System.Drawing.Size(182, 29);
             this.dutyIn.TabIndex = 18;
             // 
             // offsetIn
             // 
-            this.offsetIn.Location = new System.Drawing.Point(684, 248);
+            this.offsetIn.Location = new System.Drawing.Point(684, 246);
             this.offsetIn.Name = "offsetIn";
             this.offsetIn.Size = new System.Drawing.Size(182, 29);
             this.offsetIn.TabIndex = 19;
@@ -305,7 +302,6 @@
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setup";
-            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

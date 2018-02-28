@@ -26,11 +26,5 @@ namespace rev_B_App
                 Application.Exit();
             }
         }
-
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
