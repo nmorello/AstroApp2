@@ -115,5 +115,23 @@ namespace rev_B_App
             }
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            prevWave = selectedWave;
+            selectedWave = button12.Text;
+            this.Close();
+
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            prevWave = selectedWave;
+            selectedWave = button13.Text;
+            this.Close();
+        }
+
+
     }
 }

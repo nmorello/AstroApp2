@@ -16,9 +16,13 @@ namespace rev_B_App
 
     public partial class Form3 : Form
     {
-        public static string customWave, freq, amp, offs, phaset, rampt, volt, dutyt, loopc, timed;
+        public static int freq1, amp1, offs1, phaset1, rampt, volt, dutyt, loopc, timed;
+        public static int freq2, freq3, freq4, freq5;
+        public static int amp2, amp3, amp4, amp5;
+        public static int offs2, offs3, offs4, offs5;
+        public static int phaset2, phaset3, phaset4;
+        public static string customWave;
 
-     
 
         public Form3()
         {
@@ -329,51 +333,85 @@ namespace rev_B_App
             {
                 case "DC":
 
-                    volt = voltageIn.Text;
+                    int v;
+                    int.TryParse(voltageIn.Text, out v);
+                    volt = v;
                     break;
 
                 case "Sine":
 
-                    freq = freqIn.Text;
-                    amp = ampIn.Text;
-                    offs = offsetIn.Text;
-                    phaset = phaseIn.Text;
+                    int f1, a1, o1, p1;
+                    //NOTE TO SELf: try to make f for every channel, i.e. f1 f2 f3 f4 etc.
+                    int.TryParse(freqIn.Text, out f1);
+                    int.TryParse(ampIn.Text, out a1);
+                    int.TryParse(offsetIn.Text, out o1);
+                    int.TryParse(phaseIn.Text, out p1);
+                    freq1 = f1;
+                    amp1 = a1;
+                    offs1 = o1;
+                    phaset1 = p1;
                     break;
 
                 case "Square":
 
-                    freq = freqIn.Text;
-                    amp = ampIn.Text;
-                    offs = offsetIn.Text;
-                    phaset = phaseIn.Text;
+                    int f2, a2, o2, p2;
+                    int.TryParse(freqIn.Text, out f2);
+                    int.TryParse(ampIn.Text, out a2);
+                    int.TryParse(offsetIn.Text, out o2);
+                    int.TryParse(phaseIn.Text, out p2);
+                    freq2 = f2;
+                    amp2 = a2;
+                    offs2 = o2;
+                    phaset2 = p2;
                     break;
                 case "Pulse":
 
-                    freq = freqIn.Text;
-                    amp = ampIn.Text;
-                    offs = offsetIn.Text;
-                    dutyt = dutyIn.Text;
+                    int f3, a3, o3, d3;
+                    int.TryParse(freqIn.Text, out f3);
+                    int.TryParse(ampIn.Text, out a3);
+                    int.TryParse(offsetIn.Text, out o3);
+                    int.TryParse(dutyIn.Text, out d3);
+                    freq3 = f3;
+                    amp3 = a3;
+                    offs3 = o3;
+                    dutyt = d3;
                     break;
+
                 case "Triangle":
-                    freq = freqIn.Text;
-                    amp = ampIn.Text;
-                    offs = offsetIn.Text;
+
+                    int f4, a4, o4;
+                    int.TryParse(freqIn.Text, out f4);
+                    int.TryParse(ampIn.Text, out a4);
+                    int.TryParse(offsetIn.Text, out o4);
+                    freq4 = f4;
+                    amp4 = a4;
+                    offs4 = o4;
                     break;
 
                 case "Sawtooth":
-                    freq = freqIn.Text;
-                    amp = ampIn.Text;
-                    offs = offsetIn.Text;
-                    rampt = rampTimeIn.Text;
+
+                    int f5, a5, o5, r5;
+                    int.TryParse(freqIn.Text, out f5);
+                    int.TryParse(ampIn.Text, out a5);
+                    int.TryParse(offsetIn.Text, out o5);
+                    int.TryParse(rampTimeIn.Text, out r5);
+                    freq5 = f5;
+                    amp5 = a5;
+                    offs5 = o5;
+                    rampt = r5;
                     break;
 
                 case "Arb":
-                    loopc = loopIn.Text;
-                    timed = timeDIn.Text;
+                    int lc, td;
+                    int.TryParse(loopIn.Text, out lc);
+                    int.TryParse(timeDIn.Text, out td);
+                    loopc = lc;
+                    timed = td;
+                    
                     break;
 
             }
-
+            
             this.Close();
         }
 

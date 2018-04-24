@@ -299,6 +299,7 @@
             this.Controls.Add(this.frequency);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.modeSelect);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setup";
@@ -323,7 +324,6 @@
         private System.Windows.Forms.ComboBox posOrNeg;
         private System.Windows.Forms.TextBox voltageIn;
         private System.Windows.Forms.TextBox timeDIn;
-        private System.Windows.Forms.TextBox freqIn;
         private System.Windows.Forms.TextBox loopIn;
         private System.Windows.Forms.TextBox ampIn;
         private System.Windows.Forms.TextBox dutyIn;
@@ -332,5 +332,6 @@
         private System.Windows.Forms.TextBox phaseIn;
         private System.Windows.Forms.Button selectbut;
         private System.Windows.Forms.Button cancelbut;
+        public System.Windows.Forms.TextBox freqIn;
     }
 }

@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace rev_B_App
 {
-    public partial class Form4 : Form
+    public partial class AstroNova : Form
     {
-        public Form4()
+        public AstroNova()
         {
             InitializeComponent();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Increment(1);
-            if (progressBar1.Value == 100)
+            progressBar1.Increment(2);
+            if (progressBar1.Value == 200)
             {
                 timer1.Stop();
                 Application.Exit();

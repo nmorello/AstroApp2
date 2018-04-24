@@ -10,470 +10,727 @@ using System.Windows.Forms;
 
 namespace rev_B_App
 {
-    public partial class Form5 : Form
+    public partial class Parameters : Form
     {
-        public Form5()
+        public Parameters()
         {
             InitializeComponent();
+
             //////////////////////////////////////////////////////////////////////////////
             //channel 1 wave/////////////////////////////////////////////////////////////
             /////////////////////////////////////////////////////////////////////////////
+
+            //switch (Form1.wave1)
+            //{
+            //    case "DC":
             if (Form1.wave1 == "DC")
-                {
-                p11.Text = Form3.volt + " V";
+             {
+                
+                Form1.channel1[0] = Form3.volt;
+                p11.Text = Form1.channel1[0] + " V";
                 p12.Visible = false;
                 p13.Visible = false;
                 p14.Visible = false;
+            }
+                //    case "Sine":
+                else if(Form1.wave1 == "Sine")
 
-                }
-            else if(Form1.wave1 == "Sine")
             {
-                p11.Text = Form3.freq; 
-                p12.Text = Form3.amp;
-                p13.Text = Form3.offs;
-                p14.Text = Form3.phaset;
+                Form1.channel1[1] = Form3.freq1;
+                Form1.channel1[2] = Form3.amp1;
+                Form1.channel1[3] = Form3.offs1;
+                Form1.channel1[4] = Form3.phaset1;
+                p11.Text = Form1.channel1[1] + " Hz";
+                p12.Text = Form1.channel1[2] + " V";
+                p13.Text = Form1.channel1[3] + " ";
+                p14.Text = Form1.channel1[4] + " ";
             }
-            else if(Form1.wave1 == "Square")
+            //    case "Square":
+            else if (Form1.wave1 == "Square")
             {
-                p11.Text = Form3.freq;
-                p12.Text = Form3.amp;
-                p13.Text = Form3.offs;
-                p14.Text = Form3.phaset;
+                Form1.channel1[1] = Form3.freq2;
+                Form1.channel1[2] = Form3.amp2;
+                Form1.channel1[3] = Form3.offs2;
+                Form1.channel1[4] = Form3.phaset2;
+                p11.Text = Form1.channel1[1] + " Hz";
+                p12.Text = Form1.channel1[2] + " V";
+                p13.Text = Form1.channel1[3] + " ";
+                p14.Text = Form1.channel1[4] + " ";
+
             }
-            else if(Form1.wave1 == "Pulse")
+            //    case "Pulse":
+            else if (Form1.wave1 == "Pulse")
             {
-                p11.Text = Form3.freq;
-                p12.Text = Form3.amp;
-                p13.Text = Form3.offs;
-                p14.Text = Form3.dutyt;
+                Form1.channel1[1] = Form3.freq3;
+                Form1.channel1[2] = Form3.amp3;
+                Form1.channel1[3] = Form3.offs3;
+                Form1.channel1[5] = Form3.dutyt;
+                p11.Text = Form1.channel1[1] + " Hz";
+                p12.Text = Form1.channel1[2] + " V";
+                p13.Text = Form1.channel1[3] + " ";
+                p14.Text = Form1.channel1[5] + " ";
+
             }
-            else if(Form1.wave1 == "Triangle")
+            //    case "Triangle":
+            else if (Form1.wave1 == "Triangle")
             {
-                p11.Text = Form3.freq;
-                p12.Text = Form3.amp;
-                p13.Text = Form3.offs;
+                Form1.channel1[1] = Form3.freq4;
+                Form1.channel1[2] = Form3.amp4;
+                Form1.channel1[3] = Form3.offs4;
+                p11.Text = Form1.channel1[1] + " Hz";
+                p12.Text = Form1.channel1[2] + " V";
+                p13.Text = Form1.channel1[3] + " ";
                 p14.Visible = false;
-            
             }
-            else if(Form1.wave1 == "Sawtooth")
+            //    case "Sawtooth":
+            else if (Form1.wave1 == "Sawtooth")
             {
-                p11.Text = Form3.freq;
-                p12.Text = Form3.amp;
-                p13.Text = Form3.offs;
-                p14.Text = Form3.rampt;
+                Form1.channel1[1] = Form3.freq5;
+                Form1.channel1[2] = Form3.amp5;
+                Form1.channel1[3] = Form3.offs5;
+                Form1.channel1[6] = Form3.rampt;
+                p11.Text = Form1.channel1[1] + " Hz";
+                p12.Text = Form1.channel1[2] + " V";
+                p13.Text = Form1.channel1[3] + " ";
+                p14.Text = Form1.channel1[6] + " ";
 
             }
-            else if(Form1.wave1 == "Arb")
-            {
-                p11.Text = Form3.timed;
-                p12.Text = Form3.loopc;
-                p13.Visible = false;
-                p14.Visible = false;
+            //    case "Arb":
+            //else if (Form1.wave1 == "Arb")
+            //{
+            //    p11.Text = Form3.timed;
+            //    p12.Text = Form3.loopc;
+            //    p13.Visible = false;
+            //    p14.Visible = false;
 
-            }
+            //}
+            //}
+
             //////////////////////////////////////////////////////////////////////////////////////////////////
             //channel 2 wave
             //////////////////////////////////////////////////////////////////////////////////////////////////
+            //switch (Form1.wave2)
+            //{
+
+
+            //    case "DC":
             if (Form1.wave2 == "DC")
             {
-                p21.Text = Form3.volt + " V";
+
+                Form1.channel2[0] = Form3.volt;
+                p21.Text = Form1.channel2[0] + " V";
                 p22.Visible = false;
                 p23.Visible = false;
                 p24.Visible = false;
-
             }
+            //    case "Sine":
             else if (Form1.wave2 == "Sine")
+
             {
-                p21.Text = Form3.freq;
-                p22.Text = Form3.amp;
-                p23.Text = Form3.offs;
-                p24.Text = Form3.phaset;
+                Form1.channel2[1] = Form3.freq1;
+                Form1.channel2[2] = Form3.amp1;
+                Form1.channel2[3] = Form3.offs1;
+                Form1.channel2[4] = Form3.phaset1;
+                p21.Text = Form1.channel2[1] + " Hz";
+                p22.Text = Form1.channel2[2] + " V";
+                p23.Text = Form1.channel2[3] + " ";
+                p24.Text = Form1.channel2[4] + " ";
             }
+            //    case "Square":
             else if (Form1.wave2 == "Square")
             {
-                p21.Text = Form3.freq;
-                p22.Text = Form3.amp;
-                p23.Text = Form3.offs;
-                p24.Text = Form3.phaset;
+                Form1.channel2[1] = Form3.freq2;
+                Form1.channel2[2] = Form3.amp2;
+                Form1.channel2[3] = Form3.offs2;
+                Form1.channel2[4] = Form3.phaset2;
+                p21.Text = Form1.channel2[1] + " Hz";
+                p22.Text = Form1.channel2[2] + " V";
+                p23.Text = Form1.channel2[3] + " ";
+                p24.Text = Form1.channel2[4] + " ";
+
             }
+            //    case "Pulse":
             else if (Form1.wave2 == "Pulse")
             {
-                p21.Text = Form3.freq;
-                p22.Text = Form3.amp;
-                p23.Text = Form3.offs;
-                p24.Text = Form3.dutyt;
-            }
-            else if (Form1.wave2 == "Triangle")
-            {
-                p21.Text = Form3.freq;
-                p22.Text = Form3.amp;
-                p23.Text = Form3.offs;
-                p24.Visible = false;
+                Form1.channel2[1] = Form3.freq3;
+                Form1.channel2[2] = Form3.amp3;
+                Form1.channel2[3] = Form3.offs3;
+                Form1.channel2[5] = Form3.dutyt;
+                p21.Text = Form1.channel2[1] + " Hz";
+                p22.Text = Form1.channel2[2] + " V";
+                p23.Text = Form1.channel2[3] + " ";
+                p24.Text = Form1.channel2[5] + " ";
 
             }
+            //    case "Triangle":
+            else if (Form1.wave1 == "Triangle")
+            {
+                Form1.channel2[1] = Form3.freq4;
+                Form1.channel2[2] = Form3.amp4;
+                Form1.channel2[3] = Form3.offs4;
+                p21.Text = Form1.channel2[1] + " Hz";
+                p22.Text = Form1.channel2[2] + " V";
+                p23.Text = Form1.channel2[3] + " ";
+                p24.Visible = false;
+            }
+            //    case "Sawtooth":
             else if (Form1.wave2 == "Sawtooth")
             {
-                p21.Text = Form3.freq;
-                p22.Text = Form3.amp;
-                p23.Text = Form3.offs;
-                p24.Text = Form3.rampt;
+                Form1.channel2[1] = Form3.freq5;
+                Form1.channel2[2] = Form3.amp5;
+                Form1.channel2[3] = Form3.offs5;
+                Form1.channel2[6] = Form3.rampt;
+                p21.Text = Form1.channel2[1] + " Hz";
+                p22.Text = Form1.channel2[2] + " V";
+                p23.Text = Form1.channel2[3] + " ";
+                p24.Text = Form1.channel2[6] + " ";
 
             }
-            else if (Form1.wave2 == "Arb")
-            {
-                p21.Text = Form3.timed;
-                p22.Text = Form3.loopc;
-                p23.Visible = false;
-                p24.Visible = false;
+            //    case "Arb":
+            //else if (Form1.wave2 == "Arb")
+            //{
+            //    p21.Text = Form3.timed;
+            //    p22.Text = Form3.loopc;
+            //    p23.Visible = false;
+            //    p24.Visible = false;
 
-            }
-            /////////////////////////////////////////////////////////////////////////////////////
-            //channel 3 wave
-            /////////////////////////////////////////////////////////////////////////////////////
+            //}
+            //}
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////channel 3 wave
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+
             if (Form1.wave3 == "DC")
             {
-                p31.Text = Form3.volt + " V";
+
+                Form1.channel3[0] = Form3.volt;
+                p31.Text = Form1.channel3[0] + " V";
                 p32.Visible = false;
                 p33.Visible = false;
                 p34.Visible = false;
-
             }
+            //    
             else if (Form1.wave3 == "Sine")
+
             {
-                p31.Text = Form3.freq;
-                p32.Text = Form3.amp;
-                p33.Text = Form3.offs;
-                p34.Text = Form3.phaset;
+                Form1.channel3[1] = Form3.freq1;
+                Form1.channel3[2] = Form3.amp1;
+                Form1.channel3[3] = Form3.offs1;
+                Form1.channel3[4] = Form3.phaset1;
+                p31.Text = Form1.channel3[1] + " Hz";
+                p32.Text = Form1.channel3[2] + " V";
+                p33.Text = Form1.channel3[3] + " ";
+                p34.Text = Form1.channel3[4] + " ";
             }
+            //    
             else if (Form1.wave3 == "Square")
             {
-                p31.Text = Form3.freq;
-                p32.Text = Form3.amp;
-                p33.Text = Form3.offs;
-                p34.Text = Form3.phaset;
+                Form1.channel3[1] = Form3.freq2;
+                Form1.channel3[2] = Form3.amp2;
+                Form1.channel3[3] = Form3.offs2;
+                Form1.channel3[4] = Form3.phaset2;
+                p31.Text = Form1.channel3[1] + " Hz";
+                p32.Text = Form1.channel3[2] + " V";
+                p33.Text = Form1.channel3[3] + " ";
+                p34.Text = Form1.channel3[4] + " ";
+
             }
+            //    
             else if (Form1.wave3 == "Pulse")
             {
-                p31.Text = Form3.freq;
-                p32.Text = Form3.amp;
-                p33.Text = Form3.offs;
-                p34.Text = Form3.dutyt;
+                Form1.channel3[1] = Form3.freq3;
+                Form1.channel3[2] = Form3.amp3;
+                Form1.channel3[3] = Form3.offs3;
+                Form1.channel3[5] = Form3.dutyt;
+                p31.Text = Form1.channel3[1] + " Hz";
+                p32.Text = Form1.channel3[2] + " V";
+                p33.Text = Form1.channel3[3] + " ";
+                p34.Text = Form1.channel3[5] + " ";
+
             }
+            //    case "Triangle":
             else if (Form1.wave3 == "Triangle")
             {
-                p31.Text = Form3.freq;
-                p32.Text = Form3.amp;
-                p33.Text = Form3.offs;
+                Form1.channel3[1] = Form3.freq4;
+                Form1.channel3[2] = Form3.amp4;
+                Form1.channel3[3] = Form3.offs4;
+                p31.Text = Form1.channel3[1] + " Hz";
+                p32.Text = Form1.channel3[2] + " V";
+                p33.Text = Form1.channel3[3] + " ";
                 p34.Visible = false;
-
             }
+            //   
             else if (Form1.wave3 == "Sawtooth")
             {
-                p31.Text = Form3.freq;
-                p32.Text = Form3.amp;
-                p33.Text = Form3.offs;
-                p34.Text = Form3.rampt;
+                Form1.channel3[1] = Form3.freq5;
+                Form1.channel3[2] = Form3.amp5;
+                Form1.channel3[3] = Form3.offs5;
+                Form1.channel3[6] = Form3.rampt;
+                p31.Text = Form1.channel3[1] + " Hz";
+                p32.Text = Form1.channel3[2] + " V";
+                p33.Text = Form1.channel3[3] + " ";
+                p34.Text = Form1.channel3[6] + " ";
 
             }
-            else if (Form1.wave3 == "Arb")
-            {
-                p31.Text = Form3.timed;
-                p32.Text = Form3.loopc;
-                p33.Visible = false;
-                p34.Visible = false;
+            //    case "Arb":
+            //else if (Form1.wave3 == "Arb")
+            //{
+            //    p31.Text = Form3.timed;
+            //    p32.Text = Form3.loopc;
+            //    p33.Visible = false;
+            //    p34.Visible = false;
 
-            }
-            //////////////////////////////////////////////////////////////////////////////////////
-            //channel 4 wave
-            //////////////////////////////////////////////////////////////////////////////////////
+            //}
+         
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////channel 4 wave
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            //switch (Form1.wave4)
             if (Form1.wave4 == "DC")
             {
-                p41.Text = Form3.volt + " V";
+
+                Form1.channel4[0] = Form3.volt;
+                p41.Text = Form1.channel4[0] + " V";
                 p42.Visible = false;
                 p43.Visible = false;
                 p44.Visible = false;
-
             }
+            //    case "Sine":
             else if (Form1.wave4 == "Sine")
+
             {
-                p41.Text = Form3.freq;
-                p42.Text = Form3.amp;
-                p43.Text = Form3.offs;
-                p44.Text = Form3.phaset;
+                Form1.channel4[1] = Form3.freq1;
+                Form1.channel4[2] = Form3.amp1;
+                Form1.channel4[3] = Form3.offs1;
+                Form1.channel4[4] = Form3.phaset1;
+                p41.Text = Form1.channel4[1] + " Hz";
+                p42.Text = Form1.channel4[2] + " V";
+                p43.Text = Form1.channel4[3] + " ";
+                p44.Text = Form1.channel4[4] + " ";
             }
+            //    case "Square":
             else if (Form1.wave4 == "Square")
             {
-                p41.Text = Form3.freq;
-                p42.Text = Form3.amp;
-                p43.Text = Form3.offs;
-                p44.Text = Form3.phaset;
+                Form1.channel4[1] = Form3.freq2;
+                Form1.channel4[2] = Form3.amp2;
+                Form1.channel4[3] = Form3.offs2;
+                Form1.channel4[4] = Form3.phaset2;
+                p41.Text = Form1.channel4[1] + " Hz";
+                p42.Text = Form1.channel4[2] + " V";
+                p43.Text = Form1.channel4[3] + " ";
+                p44.Text = Form1.channel4[4] + " ";
+
             }
+            //    case "Pulse":
             else if (Form1.wave4 == "Pulse")
             {
-                p41.Text = Form3.freq;
-                p42.Text = Form3.amp;
-                p43.Text = Form3.offs;
-                p44.Text = Form3.dutyt;
+                Form1.channel4[1] = Form3.freq3;
+                Form1.channel4[2] = Form3.amp3;
+                Form1.channel4[3] = Form3.offs3;
+                Form1.channel4[5] = Form3.dutyt;
+                p41.Text = Form1.channel4[1] + " Hz";
+                p42.Text = Form1.channel4[2] + " V";
+                p43.Text = Form1.channel4[3] + " ";
+                p44.Text = Form1.channel4[5] + " ";
+
             }
+            //    case "Triangle":
             else if (Form1.wave4 == "Triangle")
             {
-                p41.Text = Form3.freq;
-                p42.Text = Form3.amp;
-                p43.Text = Form3.offs;
+                Form1.channel4[1] = Form3.freq4;
+                Form1.channel4[2] = Form3.amp4;
+                Form1.channel4[3] = Form3.offs4;
+                p41.Text = Form1.channel4[1] + " Hz";
+                p42.Text = Form1.channel4[2] + " V";
+                p43.Text = Form1.channel4[3] + " ";
                 p44.Visible = false;
-
             }
+            //    case "Sawtooth":
             else if (Form1.wave4 == "Sawtooth")
             {
-                p41.Text = Form3.freq;
-                p42.Text = Form3.amp;
-                p43.Text = Form3.offs;
-                p44.Text = Form3.rampt;
+                Form1.channel4[1] = Form3.freq5;
+                Form1.channel4[2] = Form3.amp5;
+                Form1.channel4[3] = Form3.offs5;
+                Form1.channel4[6] = Form3.rampt;
+                p41.Text = Form1.channel4[1] + " Hz";
+                p42.Text = Form1.channel4[2] + " V";
+                p43.Text = Form1.channel4[3] + " ";
+                p44.Text = Form1.channel4[6] + " ";
 
             }
+            //    case "Arb":
             else if (Form1.wave4 == "Arb")
-            {
-                p41.Text = Form3.timed;
-                p42.Text = Form3.loopc;
-                p43.Visible = false;
-                p44.Visible = false;
+            //{
+            //    p41.Text = Form3.timed;
+            //    p42.Text = Form3.loopc;
+            //    p43.Visible = false;
+            //    p44.Visible = false;
+            //}
+            //}
 
-            }
-            /////////////////////////////////////////////////////////////////////////////
-            //channel 5 wave
-            /////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////channel 5 wave
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            //switch (Form1.wave5)
             if (Form1.wave5 == "DC")
             {
-                p51.Text = Form3.volt + " V";
+
+                Form1.channel5[0] = Form3.volt;
+                p51.Text = Form1.channel5[0] + " V";
                 p52.Visible = false;
                 p53.Visible = false;
                 p54.Visible = false;
-
             }
+            //    case "Sine":
             else if (Form1.wave5 == "Sine")
+
             {
-                p51.Text = Form3.freq;
-                p52.Text = Form3.amp;
-                p53.Text = Form3.offs;
-                p54.Text = Form3.phaset;
+                Form1.channel5[1] = Form3.freq1;
+                Form1.channel5[2] = Form3.amp1;
+                Form1.channel5[3] = Form3.offs1;
+                Form1.channel5[4] = Form3.phaset1;
+                p51.Text = Form1.channel5[1] + " Hz";
+                p52.Text = Form1.channel5[2] + " V";
+                p53.Text = Form1.channel5[3] + " ";
+                p54.Text = Form1.channel5[4] + " ";
             }
+            //    case "Square":
             else if (Form1.wave5 == "Square")
             {
-                p51.Text = Form3.freq;
-                p52.Text = Form3.amp;
-                p53.Text = Form3.offs;
-                p54.Text = Form3.phaset;
+                Form1.channel5[1] = Form3.freq2;
+                Form1.channel5[2] = Form3.amp2;
+                Form1.channel5[3] = Form3.offs2;
+                Form1.channel5[4] = Form3.phaset2;
+                p51.Text = Form1.channel5[1] + " Hz";
+                p52.Text = Form1.channel5[2] + " V";
+                p53.Text = Form1.channel5[3] + " ";
+                p54.Text = Form1.channel5[4] + " ";
+
             }
+            //    case "Pulse":
             else if (Form1.wave5 == "Pulse")
             {
-                p51.Text = Form3.freq;
-                p52.Text = Form3.amp;
-                p53.Text = Form3.offs;
-                p54.Text = Form3.dutyt;
+                Form1.channel5[1] = Form3.freq3;
+                Form1.channel5[2] = Form3.amp3;
+                Form1.channel5[3] = Form3.offs3;
+                Form1.channel5[5] = Form3.dutyt;
+                p51.Text = Form1.channel5[1] + " Hz";
+                p52.Text = Form1.channel5[2] + " V";
+                p53.Text = Form1.channel5[3] + " ";
+                p54.Text = Form1.channel5[5] + " ";
+
             }
+            //    case "Triangle":
             else if (Form1.wave5 == "Triangle")
             {
-                p51.Text = Form3.freq;
-                p52.Text = Form3.amp;
-                p53.Text = Form3.offs;
+                Form1.channel5[1] = Form3.freq4;
+                Form1.channel5[2] = Form3.amp4;
+                Form1.channel5[3] = Form3.offs4;
+                p51.Text = Form1.channel5[1] + " Hz";
+                p52.Text = Form1.channel5[2] + " V";
+                p53.Text = Form1.channel5[3] + " ";
                 p54.Visible = false;
-
             }
+            //    case "Sawtooth":
             else if (Form1.wave5 == "Sawtooth")
             {
-                p51.Text = Form3.freq;
-                p52.Text = Form3.amp;
-                p53.Text = Form3.offs;
-                p54.Text = Form3.rampt;
+                Form1.channel5[1] = Form3.freq5;
+                Form1.channel5[2] = Form3.amp5;
+                Form1.channel5[3] = Form3.offs5;
+                Form1.channel5[6] = Form3.rampt;
+                p51.Text = Form1.channel5[1] + " Hz";
+                p52.Text = Form1.channel5[2] + " V";
+                p53.Text = Form1.channel5[3] + " ";
+                p54.Text = Form1.channel5[6] + " ";
 
             }
-            else if (Form1.wave5 == "Arb")
-            {
-                p51.Text = Form3.timed;
-                p52.Text = Form3.loopc;
-                p53.Visible = false;
-                p54.Visible = false;
+            //    case "Arb":
+            //else if (Form1.wave5 == "Arb")
+            //{
+            //    p51.Text = Form3.timed;
+            //    p52.Text = Form3.loopc;
+            //    p53.Visible = false;
+            //    p54.Visible = false;
 
-            }
-            ///////////////////////////////////////////////////////////////////////
-            //channel 6 wave
-            ///////////////////////////////////////////////////////////////////////
+            //}
+            //}
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////channel 6 wave
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            //switch (Form1.wave6)
             if (Form1.wave6 == "DC")
             {
-                p61.Text = Form3.volt + " V";
+
+                Form1.channel6[0] = Form3.volt;
+                p61.Text = Form1.channel6[0] + " V";
                 p62.Visible = false;
                 p63.Visible = false;
                 p64.Visible = false;
-
             }
+            //    case "Sine":
             else if (Form1.wave6 == "Sine")
+
             {
-                p61.Text = Form3.freq;
-                p62.Text = Form3.amp;
-                p63.Text = Form3.offs;
-                p64.Text = Form3.phaset;
+                Form1.channel6[1] = Form3.freq1;
+                Form1.channel6[2] = Form3.amp1;
+                Form1.channel6[3] = Form3.offs1;
+                Form1.channel6[4] = Form3.phaset1;
+                p61.Text = Form1.channel6[1] + " Hz";
+                p62.Text = Form1.channel6[2] + " V";
+                p63.Text = Form1.channel6[3] + " ";
+                p64.Text = Form1.channel6[4] + " ";
             }
+            //    case "Square":
             else if (Form1.wave6 == "Square")
             {
-                p61.Text = Form3.freq;
-                p62.Text = Form3.amp;
-                p63.Text = Form3.offs;
-                p64.Text = Form3.phaset;
+                Form1.channel6[1] = Form3.freq2;
+                Form1.channel6[2] = Form3.amp2;
+                Form1.channel6[3] = Form3.offs2;
+                Form1.channel6[4] = Form3.phaset2;
+                p61.Text = Form1.channel6[1] + " Hz";
+                p62.Text = Form1.channel6[2] + " V";
+                p63.Text = Form1.channel6[3] + " ";
+                p64.Text = Form1.channel6[4] + " ";
+
             }
+            //    case "Pulse":
             else if (Form1.wave6 == "Pulse")
             {
-                p61.Text = Form3.freq;
-                p62.Text = Form3.amp;
-                p63.Text = Form3.offs;
-                p64.Text = Form3.dutyt;
+                Form1.channel6[1] = Form3.freq3;
+                Form1.channel6[2] = Form3.amp3;
+                Form1.channel6[3] = Form3.offs3;
+                Form1.channel6[5] = Form3.dutyt;
+                p61.Text = Form1.channel6[1] + " Hz";
+                p62.Text = Form1.channel6[2] + " V";
+                p63.Text = Form1.channel6[3] + " ";
+                p64.Text = Form1.channel6[5] + " ";
+
             }
+            //    case "Triangle":
             else if (Form1.wave6 == "Triangle")
             {
-                p61.Text = Form3.freq;
-                p62.Text = Form3.amp;
-                p63.Text = Form3.offs;
+                Form1.channel6[1] = Form3.freq4;
+                Form1.channel6[2] = Form3.amp4;
+                Form1.channel6[3] = Form3.offs4;
+                p61.Text = Form1.channel6[1] + " Hz";
+                p62.Text = Form1.channel6[2] + " V";
+                p63.Text = Form1.channel6[3] + " ";
                 p64.Visible = false;
-
             }
-            else if (Form1.wave6 == "Sawtooth")
+            //    case "Sawtooth":
+            else if (Form1.wave2 == "Sawtooth")
             {
-                p61.Text = Form3.freq;
-                p62.Text = Form3.amp;
-                p63.Text = Form3.offs;
-                p64.Text = Form3.rampt;
+                Form1.channel6[1] = Form3.freq5;
+                Form1.channel6[2] = Form3.amp5;
+                Form1.channel6[3] = Form3.offs5;
+                Form1.channel6[6] = Form3.rampt;
+                p61.Text = Form1.channel6[1] + " Hz";
+                p62.Text = Form1.channel6[2] + " V";
+                p63.Text = Form1.channel6[3] + " ";
+                p64.Text = Form1.channel6[6] + " ";
 
             }
-            else if (Form1.wave6 == "Arb")
-            {
-                p61.Text = Form3.timed;
-                p62.Text = Form3.loopc;
-                p63.Visible = false;
-                p64.Visible = false;
+            //    case "Arb":
+            //else if (Form1.wave6 == "Arb")
+            //{
+            //    p61.Text = Form3.timed;
+            //    p62.Text = Form3.loopc;
+            //    p63.Visible = false;
+            //    p64.Visible = false;
+            //}
+            //}
 
-            }
-            //////////////////////////////////////////////////////////////////////////////////////////////
-            //channel 7 wave
-            //////////////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////channel 7 wave
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            //switch (Form1.wave7)
+            //{
+
+
+            //    case "DC":
             if (Form1.wave7 == "DC")
             {
-                p71.Text = Form3.volt + " V";
+
+                Form1.channel7[0] = Form3.volt;
+                p71.Text = Form1.channel7[0] + " V";
                 p72.Visible = false;
                 p73.Visible = false;
                 p74.Visible = false;
-
             }
+            //    case "Sine":
             else if (Form1.wave7 == "Sine")
+
             {
-                p71.Text = Form3.freq;
-                p72.Text = Form3.amp;
-                p73.Text = Form3.offs;
-                p74.Text = Form3.phaset;
+                Form1.channel7[1] = Form3.freq1;
+                Form1.channel7[2] = Form3.amp1;
+                Form1.channel7[3] = Form3.offs1;
+                Form1.channel7[4] = Form3.phaset1;
+                p71.Text = Form1.channel7[1] + " Hz";
+                p72.Text = Form1.channel7[2] + " V";
+                p73.Text = Form1.channel7[3] + " ";
+                p74.Text = Form1.channel7[4] + " ";
             }
+            //    case "Square":
             else if (Form1.wave7 == "Square")
             {
-                p71.Text = Form3.freq;
-                p72.Text = Form3.amp;
-                p73.Text = Form3.offs;
-                p74.Text = Form3.phaset;
+                Form1.channel7[1] = Form3.freq2;
+                Form1.channel7[2] = Form3.amp2;
+                Form1.channel7[3] = Form3.offs2;
+                Form1.channel7[4] = Form3.phaset2;
+                p71.Text = Form1.channel7[1] + " Hz";
+                p72.Text = Form1.channel7[2] + " V";
+                p73.Text = Form1.channel7[3] + " ";
+                p74.Text = Form1.channel7[4] + " ";
+
             }
+            //    case "Pulse":
             else if (Form1.wave7 == "Pulse")
             {
-                p71.Text = Form3.freq;
-                p72.Text = Form3.amp;
-                p73.Text = Form3.offs;
-                p74.Text = Form3.dutyt;
+                Form1.channel7[1] = Form3.freq3;
+                Form1.channel7[2] = Form3.amp3;
+                Form1.channel7[3] = Form3.offs3;
+                Form1.channel7[5] = Form3.dutyt;
+                p71.Text = Form1.channel7[1] + " Hz";
+                p72.Text = Form1.channel7[2] + " V";
+                p73.Text = Form1.channel7[3] + " ";
+                p74.Text = Form1.channel7[5] + " ";
+
             }
+            //    case "Triangle":
             else if (Form1.wave7 == "Triangle")
             {
-                p71.Text = Form3.freq;
-                p72.Text = Form3.amp;
-                p73.Text = Form3.offs;
+                Form1.channel7[1] = Form3.freq4;
+                Form1.channel7[2] = Form3.amp4;
+                Form1.channel7[3] = Form3.offs4;
+                p71.Text = Form1.channel7[1] + " Hz";
+                p72.Text = Form1.channel7[2] + " V";
+                p73.Text = Form1.channel7[3] + " ";
                 p74.Visible = false;
-
             }
+            //    case "Sawtooth":
             else if (Form1.wave7 == "Sawtooth")
             {
-                p71.Text = Form3.freq;
-                p72.Text = Form3.amp;
-                p73.Text = Form3.offs;
-                p74.Text = Form3.rampt;
+                Form1.channel7[1] = Form3.freq5;
+                Form1.channel7[2] = Form3.amp5;
+                Form1.channel7[3] = Form3.offs5;
+                Form1.channel7[6] = Form3.rampt;
+                p71.Text = Form1.channel7[1] + " Hz";
+                p72.Text = Form1.channel7[2] + " V";
+                p73.Text = Form1.channel7[3] + " ";
+                p74.Text = Form1.channel7[6] + " ";
 
             }
-            else if (Form1.wave7 == "Arb")
-            {
-                p71.Text = Form3.timed;
-                p72.Text = Form3.loopc;
-                p73.Visible = false;
-                p74.Visible = false;
+            //    case "Arb":
+            //else if (Form1.wave7 == "Arb")
+            //{
+            //    p71.Text = Form3.timed;
+            //    p72.Text = Form3.loopc;
+            //    p73.Visible = false;
+            //    p74.Visible = false;
 
-            }
-            ///////////////////////////////////////////////////////////////////////////////////////
-            //channel 8 wave
-            ///////////////////////////////////////////////////////////////////////////////////////
+            //}
+            //}
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////channel 8 wave
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            //switch (Form1.wave8)
+            //{
+
+
+            //    case "DC":
             if (Form1.wave8 == "DC")
             {
-                w8.Text = Form1.wave8;
-                p81.Text = Form3.volt + " V";
+
+                Form1.channel8[0] = Form3.volt;
+                p81.Text = Form1.channel8[0] + " V";
                 p82.Visible = false;
                 p83.Visible = false;
                 p84.Visible = false;
-
             }
+            //    case "Sine":
             else if (Form1.wave8 == "Sine")
+
             {
-                w8.Text = Form1.wave8;
-                p81.Text = Form3.freq;
-                p82.Text = Form3.amp;
-                p83.Text = Form3.offs;
-                p84.Text = Form3.phaset;
+                Form1.channel8[1] = Form3.freq1;
+                Form1.channel8[2] = Form3.amp1;
+                Form1.channel8[3] = Form3.offs1;
+                Form1.channel8[4] = Form3.phaset1;
+                p81.Text = Form1.channel8[1] + " Hz";
+                p82.Text = Form1.channel8[2] + " V";
+                p83.Text = Form1.channel8[3] + " ";
+                p84.Text = Form1.channel8[4] + " ";
             }
+            //    case "Square":
             else if (Form1.wave8 == "Square")
             {
-                w8.Text = Form1.wave8;
-                p81.Text = Form3.freq;
-                p82.Text = Form3.amp;
-                p83.Text = Form3.offs;
-                p84.Text = Form3.phaset;
+                Form1.channel8[1] = Form3.freq2;
+                Form1.channel8[2] = Form3.amp2;
+                Form1.channel8[3] = Form3.offs2;
+                Form1.channel8[4] = Form3.phaset2;
+                p81.Text = Form1.channel8[1] + " Hz";
+                p82.Text = Form1.channel8[2] + " V";
+                p83.Text = Form1.channel8[3] + " ";
+                p84.Text = Form1.channel8[4] + " ";
+
             }
+            //    case "Pulse":
             else if (Form1.wave8 == "Pulse")
             {
-                w8.Text = Form1.wave8;
-                p81.Text = Form3.freq;
-                p82.Text = Form3.amp;
-                p83.Text = Form3.offs;
-                p84.Text = Form3.dutyt;
+                Form1.channel8[1] = Form3.freq3;
+                Form1.channel8[2] = Form3.amp3;
+                Form1.channel8[3] = Form3.offs3;
+                Form1.channel8[5] = Form3.dutyt;
+                p81.Text = Form1.channel8[1] + " Hz";
+                p82.Text = Form1.channel8[2] + " V";
+                p83.Text = Form1.channel8[3] + " ";
+                p84.Text = Form1.channel8[5] + " ";
+
             }
+            //    case "Triangle":
             else if (Form1.wave8 == "Triangle")
             {
-                w8.Text = Form1.wave8;
-                p81.Text = Form3.freq;
-                p82.Text = Form3.amp;
-                p83.Text = Form3.offs;
+                Form1.channel8[1] = Form3.freq4;
+                Form1.channel8[2] = Form3.amp4;
+                Form1.channel8[3] = Form3.offs4;
+                p81.Text = Form1.channel8[1] + " Hz";
+                p82.Text = Form1.channel8[2] + " V";
+                p83.Text = Form1.channel8[3] + " ";
                 p84.Visible = false;
-
             }
+            //    case "Sawtooth":
             else if (Form1.wave8 == "Sawtooth")
             {
-                w8.Text = Form1.wave8;
-                p81.Text = Form3.freq;
-                p82.Text = Form3.amp;
-                p83.Text = Form3.offs;
-                p84.Text = Form3.rampt;
+                Form1.channel8[1] = Form3.freq5;
+                Form1.channel8[2] = Form3.amp5;
+                Form1.channel8[3] = Form3.offs5;
+                Form1.channel8[6] = Form3.rampt;
+                p81.Text = Form1.channel8[1] + " Hz";
+                p82.Text = Form1.channel8[2] + " V";
+                p83.Text = Form1.channel8[3] + " ";
+                p84.Text = Form1.channel8[6] + " ";
 
             }
-            else if (Form1.wave8 == "Arb")
-            {
-                w8.Text = Form1.wave8;
-                p81.Text = Form3.timed;
-                p82.Text = Form3.loopc;
-                p83.Visible = false;
-                p84.Visible = false;
+            //    case "Arb":
+            //else if (Form1.wave8 == "Arb")
+            //{
+            //    p81.Text = Form3.timed;
+            //    p82.Text = Form3.loopc;
+            //    p83.Visible = false;
+            //    p84.Visible = false;
 
-            }
+            //}
+            //}
+
+
+
+
+
+
+            //This form will be reserved for parameters of waves.
         }
-
-     
-
-        //This form will be reserved for parameters of waves.
     }
 }

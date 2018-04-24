@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.freqbox = new System.Windows.Forms.TextBox();
-            this.ampbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ampdrop = new System.Windows.Forms.ComboBox();
-            this.freqdrop = new System.Windows.Forms.ComboBox();
+            this.ampBtn = new System.Windows.Forms.Button();
+            this.freqBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,45 +58,29 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.desbut1 = new System.Windows.Forms.Button();
-            this.saveBank = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // freqbox
-            // 
-            this.freqbox.Location = new System.Drawing.Point(365, 78);
-            this.freqbox.MaxLength = 3;
-            this.freqbox.Name = "freqbox";
-            this.freqbox.Size = new System.Drawing.Size(121, 29);
-            this.freqbox.TabIndex = 0;
-            this.freqbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.freqbox_KeyPress);
-            // 
-            // ampbox
-            // 
-            this.ampbox.Location = new System.Drawing.Point(365, 124);
-            this.ampbox.MaxLength = 3;
-            this.ampbox.Name = "ampbox";
-            this.ampbox.Size = new System.Drawing.Size(121, 29);
-            this.ampbox.TabIndex = 1;
-            this.ampbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ampbox_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(241, 82);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(174, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 25);
+            this.label1.Size = new System.Drawing.Size(172, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "Frequency";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 128);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(174, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 25);
+            this.label2.Size = new System.Drawing.Size(161, 38);
             this.label2.TabIndex = 3;
             this.label2.Text = "Amplitude";
             // 
@@ -114,12 +96,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ampdrop);
-            this.groupBox1.Controls.Add(this.freqdrop);
+            this.groupBox1.Controls.Add(this.ampBtn);
+            this.groupBox1.Controls.Add(this.freqBtn);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.ampbox);
-            this.groupBox1.Controls.Add(this.freqbox);
             this.groupBox1.Location = new System.Drawing.Point(375, 118);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(830, 249);
@@ -127,30 +107,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Master";
             // 
-            // ampdrop
+            // ampBtn
             // 
-            this.ampdrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ampdrop.FormattingEnabled = true;
-            this.ampdrop.Items.AddRange(new object[] {
-            "mV",
-            "V"});
-            this.ampdrop.Location = new System.Drawing.Point(503, 121);
-            this.ampdrop.Name = "ampdrop";
-            this.ampdrop.Size = new System.Drawing.Size(79, 32);
-            this.ampdrop.TabIndex = 5;
+            this.ampBtn.Location = new System.Drawing.Point(364, 132);
+            this.ampBtn.Name = "ampBtn";
+            this.ampBtn.Size = new System.Drawing.Size(188, 48);
+            this.ampBtn.TabIndex = 7;
+            this.ampBtn.UseVisualStyleBackColor = true;
+            this.ampBtn.TextChanged += new System.EventHandler(this.ampBtn_TextChanged_1);
+            this.ampBtn.Click += new System.EventHandler(this.ampBtn_Click);
             // 
-            // freqdrop
+            // freqBtn
             // 
-            this.freqdrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.freqdrop.FormattingEnabled = true;
-            this.freqdrop.Items.AddRange(new object[] {
-            "Hz",
-            "kHz",
-            "MHz"});
-            this.freqdrop.Location = new System.Drawing.Point(503, 78);
-            this.freqdrop.Name = "freqdrop";
-            this.freqdrop.Size = new System.Drawing.Size(79, 32);
-            this.freqdrop.TabIndex = 4;
+            this.freqBtn.Location = new System.Drawing.Point(364, 76);
+            this.freqBtn.Name = "freqBtn";
+            this.freqBtn.Size = new System.Drawing.Size(188, 48);
+            this.freqBtn.TabIndex = 6;
+            this.freqBtn.UseVisualStyleBackColor = true;
+            this.freqBtn.TextChanged += new System.EventHandler(this.freqBtn_TextChanged);
+            this.freqBtn.Click += new System.EventHandler(this.button11_Click);
             // 
             // label4
             // 
@@ -178,10 +153,11 @@
             this.comboBox3.Size = new System.Drawing.Size(121, 50);
             this.comboBox3.TabIndex = 7;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.DropDownClosed += new System.EventHandler(this.comboBox3_DropDownClosed);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(567, 476);
+            this.button1.Location = new System.Drawing.Point(532, 476);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 41);
             this.button1.TabIndex = 8;
@@ -191,7 +167,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(567, 523);
+            this.button2.Location = new System.Drawing.Point(532, 523);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 41);
             this.button2.TabIndex = 9;
@@ -201,7 +177,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(567, 572);
+            this.button3.Location = new System.Drawing.Point(532, 572);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 41);
             this.button3.TabIndex = 10;
@@ -211,7 +187,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(567, 619);
+            this.button4.Location = new System.Drawing.Point(532, 619);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(129, 41);
             this.button4.TabIndex = 11;
@@ -221,7 +197,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(567, 666);
+            this.button5.Location = new System.Drawing.Point(532, 666);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(129, 41);
             this.button5.TabIndex = 12;
@@ -231,7 +207,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(567, 713);
+            this.button6.Location = new System.Drawing.Point(532, 713);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(129, 41);
             this.button6.TabIndex = 13;
@@ -241,7 +217,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(567, 760);
+            this.button7.Location = new System.Drawing.Point(532, 760);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(129, 41);
             this.button7.TabIndex = 14;
@@ -251,7 +227,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(567, 807);
+            this.button8.Location = new System.Drawing.Point(532, 807);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(129, 41);
             this.button8.TabIndex = 15;
@@ -268,6 +244,7 @@
             this.label5.Size = new System.Drawing.Size(67, 30);
             this.label5.TabIndex = 16;
             this.label5.Text = "Start";
+            this.label5.TextChanged += new System.EventHandler(this.label5_TextChanged);
             // 
             // label6
             // 
@@ -371,7 +348,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(553, 429);
+            this.label14.Location = new System.Drawing.Point(518, 429);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(161, 44);
             this.label14.TabIndex = 27;
@@ -398,16 +375,6 @@
             this.desbut1.UseVisualStyleBackColor = true;
             this.desbut1.Click += new System.EventHandler(this.desbut1_Click);
             // 
-            // saveBank
-            // 
-            this.saveBank.Location = new System.Drawing.Point(1262, 429);
-            this.saveBank.Name = "saveBank";
-            this.saveBank.Size = new System.Drawing.Size(123, 88);
-            this.saveBank.TabIndex = 38;
-            this.saveBank.Text = "Save Bank";
-            this.saveBank.UseVisualStyleBackColor = true;
-            this.saveBank.Click += new System.EventHandler(this.saveBank_Click);
-            // 
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(373, 666);
@@ -418,24 +385,33 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button11
+            // textBox1
             // 
-            this.button11.Location = new System.Drawing.Point(1262, 523);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(123, 88);
-            this.button11.TabIndex = 40;
-            this.button11.Text = "Restore Saved Bank";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(1262, 673);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(123, 44);
+            this.textBox1.TabIndex = 41;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1257, 645);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(136, 25);
+            this.label16.TabIndex = 42;
+            this.label16.Text = "COM PORT #";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1566, 963);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.saveBank);
             this.Controls.Add(this.desbut1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -462,6 +438,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AstroApp WG-800";
@@ -473,15 +452,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox freqbox;
-        private System.Windows.Forms.TextBox ampbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox ampdrop;
-        private System.Windows.Forms.ComboBox freqdrop;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button button1;
@@ -506,9 +480,11 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button desbut1;
-        private System.Windows.Forms.Button saveBank;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button ampBtn;
+        private System.Windows.Forms.Button freqBtn;
     }
 }
 

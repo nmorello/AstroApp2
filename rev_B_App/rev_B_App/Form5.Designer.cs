@@ -1,6 +1,6 @@
 ﻿namespace rev_B_App
 {
-    public partial class Form5
+    public partial class Parameters
     {
         /// <summary>
         /// Required designer variable.
@@ -470,7 +470,7 @@
             this.label16.Size = new System.Drawing.Size(0, 25);
             this.label16.TabIndex = 40;
             // 
-            // Form5
+            // Parameters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -523,9 +523,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form5";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Parameters";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form5";
+            this.Text = "Parameters";
             this.ResumeLayout(false);
             this.PerformLayout();
 

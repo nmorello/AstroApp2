@@ -1,6 +1,6 @@
 ﻿namespace rev_B_App
 {
-    partial class Form4
+    partial class AstroNova
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AstroNova));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@
             this.progressBar1.Location = new System.Drawing.Point(175, 690);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(739, 73);
+            this.progressBar1.Step = 50;
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 0;
             // 
@@ -66,11 +67,11 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(465, 815);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 31);
+            this.label2.Size = new System.Drawing.Size(162, 31);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Version 1.2.0";
+            this.label2.Text = "Version 0.2";
             // 
-            // Form4
+            // AstroNova
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,7 +84,8 @@
             this.Controls.Add(this.progressBar1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form4";
+            this.Name = "AstroNova";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
             this.ResumeLayout(false);
